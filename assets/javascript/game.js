@@ -4,7 +4,6 @@ var winsId = document.getElementById("wins");
 var lossesId = document.getElementById("losses");
 var triesLeftId = document.getElementById("triesLeft");
 var startButtonId = document.getElementById("startButton");
-var pleasework = document.getElementById("pleasework")
 
 var wins = 0;
 var losses = 0;
@@ -75,7 +74,7 @@ function confirmLetter(letter) {
 
         triesLeftId.textContent = triesLeft;
     }
-    loseGame();
+    
 }
 
 function loseGame() {
@@ -84,19 +83,22 @@ function loseGame() {
         gameRunning = false;
         lossesId.textContent = losses;
         wordsToGuessId.textContent = randomWord;
-    }
-    winGame();
+    }  
 }
 
-function checkGame() {
-    if (randomWord.toLowerCase() === randomWordUnderscores.join('').toLowerCase()) {
+loseGame();
+
+function winGame() {
+    if (randomWord.toLowerCase() === randomWordUnderscores.toLowerCase()) {
         wins++;
         gameRunning = false;
         winsId.textContent = wins;
     }
 }
 
-pleasework.addEventListener("click", newGame);
+winGame();
+
+startButton.addEventListener("click", newGame);
 
 document.onkeyup = function (event) {
     console.dir(event);
@@ -104,3 +106,4 @@ document.onkeyup = function (event) {
         letterGuess(event.key);
     }
 }
+

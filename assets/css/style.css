@@ -2,3 +2,25 @@
     size: 40px;
     letter-spacing: 5px;
 }
+body {
+    background-image: url(../images/background-image.jpg)
+}
+.container {
+    width: 60%;
+    background: white;
+    margin: 120px auto auto auto;
+    padding: 40px 40px 80px 40px;
+}
+.container-game {
+    width: 60%;
+    background: white;
+    margin: 120px auto auto auto;
+    padding: 40px 40px 80px 40px;
+}
+h2 {
+    text-align: center;
+}
+#startButton {
+    width: 100px;
+    margin-left: 40%;
+}
